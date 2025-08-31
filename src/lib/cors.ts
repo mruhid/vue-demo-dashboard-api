@@ -1,7 +1,7 @@
 // lib/cors.ts
 import { NextRequest, NextResponse } from "next/server";
 
-const allowedOrigins = ["http://localhost:8080"]; // Vue client origin
+const allowedOrigins = [process.env.NEXT_PUBLIC_CLIENT_URL || "https://vue-demo-dashboard.vercel.app"];
 
 export function cors(req: NextRequest) {
   const origin = req.headers.get("origin") ?? "";

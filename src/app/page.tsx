@@ -12,6 +12,9 @@ export default function Home() {
           these endpoints from your frontend apps (Vue, React, Angular) or API
           clients like Postman.
         </p>
+       { process.env.NEXT_PUBLIC_CLIENT_URL&&<p className="text-black hover:underline hover:text-green-500 text-center transition-all duration-300 text-lg">
+{process.env.NEXT_PUBLIC_CLIENT_URL}
+        </p>}
 
         {/* Section: Login */}
         <section className="mb-8">
